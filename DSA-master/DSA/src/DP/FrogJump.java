@@ -41,6 +41,6 @@ public class FrogJump {
             right = memo(weights, i - 2, dp) + Math.abs(weights[i] - weights[i - 2]);
         }
 
-        return Math.min(left, right);
+        return dp[i] = Math.min(left, right);
     }
 }
