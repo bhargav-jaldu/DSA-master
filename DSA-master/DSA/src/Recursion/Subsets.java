@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Subsets {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
+        int[] arr = {1, 2, 3, 4};
 
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
         ArrayList<Integer> list = new ArrayList<>();
