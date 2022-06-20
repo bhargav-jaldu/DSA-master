@@ -14,7 +14,9 @@ public class LCS {
             Arrays.fill(row, -1);
         }
         System.out.println(memo(s1, s2, s1.length() - 1, s2.length() - 1, dp));
-        System.out.println(ans);
+        StringBuilder sb = new StringBuilder(ans);
+        sb.reverse();
+        System.out.println(sb.toString());
     }
 
 //    time: O(2n * 2m)
@@ -45,7 +47,7 @@ public class LCS {
 
         if (s1.charAt(ind1) == s2.charAt(ind2)) {
             ans += s1.charAt(ind1);
-            return 1 + memo(s1, s2, ind1 - 1, ind2 - 1, dp);
+            return dp[ind1][ind2] = 1 + memo(s1, s2, ind1 - 1, ind2 - 1, dp);
         }
 
         return dp[ind1][ind2] = Math.max(memo(s1, s2, ind1 - 1, ind2, dp), memo(s1, s2, ind1, ind2 - 1, dp));

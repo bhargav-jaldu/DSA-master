@@ -2,6 +2,7 @@ package Graphs.Dijikstras;
 
 import java.util.*;
 
+// will not work for negative weighted graphs
 class Node implements Comparator<Node> {
     int v, weight;
 
