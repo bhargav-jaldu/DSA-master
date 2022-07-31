@@ -13,7 +13,7 @@ public class Rotation {
         System.out.println(Arrays.toString(arr));
     }
 
-    static void reverse(int[] arr, int start, int end) {
+    protected static void reverse(int[] arr, int start, int end) {
 
         while(start <= end) {
             int temp = arr[start];
